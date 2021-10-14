@@ -1,4 +1,13 @@
 <body class="">
+  <div id="modal_container" class="modal-container">
+            <div class="modal">
+              <h1>Ventana Modal</h1>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque assumenda dignissimos illo explicabo natus quia repellat, praesentium voluptatibus harum ipsam dolorem cumque labore sunt dicta consectetur, nesciunt maiores delectus maxime?
+              </p>
+              <button id="close">Cerrar</button>
+            </div>
+  </div>
   <div class="wrapper ">
     <div class="sidebar" data-color="purple" data-background-color="white" data-image="../assets/img/sidebar-1.jpg">
       <!--
@@ -12,32 +21,32 @@
       <div class="sidebar-wrapper">
         <ul class="nav">
           <li class="nav-item ">
-            <a class="nav-link" href="./dashboard.html">
+            <a class="nav-link" href="./inicio.view.php">
               <i class="material-icons">dashboard</i>
               <p>Inicio</p>
             </a>
           </li>
           <!-- "active" sirve para activar visualizacion de estado opcion del menu actual  -->
           <li class="nav-item active ">
-            <a class="nav-link" href="./user.html">
+            <a class="nav-link" href="./users.view.php">
               <i class="material-icons">person</i>
-              <p>Perfiles</p>
+              <p>Clientes</p>
             </a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="./tables.html">
+            <a class="nav-link" href="./guia.view.php">
               <i class="material-icons">content_paste</i>
               <p>Guias</p>
             </a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="./typography.html">
+            <a class="nav-link" href="./contracts.view.php">
               <i class="material-icons">library_books</i>
               <p>Contartos</p>
             </a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="./icons.html">
+            <a class="nav-link" href="./inventario.view.php">
               <i class="material-icons">bubble_chart</i>
               <p>Inventario</p>
             </a>
@@ -49,7 +58,7 @@
             </a>
           </li>-->
           <li class="nav-item ">
-            <a class="nav-link" href="./notifications.html">
+            <a class="nav-link" href="./avisos.view.php">
               <i class="material-icons">notifications</i>
               <p>Notificaciones</p>
             </a>
@@ -61,7 +70,7 @@
             </a>
           </li>-->
           <li class="nav-item active-pro ">
-            <a class="nav-link" href="./upgrade.html">
+            <a class="nav-link" href="./inicio.view.php">
               <i class="material-icons">unarchive</i>
               <p>Ventas Proximamente</p>
             </a>

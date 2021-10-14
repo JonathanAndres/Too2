@@ -9,7 +9,7 @@
             <div class="col-md-8">
               <div class="card">
                 <div class="card-header card-header-primary">
-                  <h4 class="card-title">Edit Profile</h4>
+                  <h4 class="card-title">INICIO</h4>
                   <p class="card-category">Complete your profile</p>
                 </div>
                 <div class="card-body">
