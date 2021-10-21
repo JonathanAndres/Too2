@@ -1,4 +1,4 @@
-        <button id="open">
+        <button onclick='window.open("prueba.php")'>
             Hacer Click
         </button>
           

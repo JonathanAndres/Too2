@@ -9,14 +9,16 @@
         <div class="container-fluid">
           <div class="row">
             <div class="col-md-12">
-            <button id="open">Modal</button>
+              
               <div class="card">
                 <div class="card-header card-header-primary">
                   <h4 class="card-title">Usuarios</h4>
                   <p class="card-category">Complete your profile</p>
                 </div>
                 <div class="card-body"> 
-                
+                <button class="btn btn-primary pull-left" onclick='window.open("./registro.view.php","","width=500,height=500")'>
+                  registro
+                </button>
                 <div class="table-responsive">
                     <table class="table">
                       <thead class=" text-primary">
