@@ -1,5 +1,6 @@
-<?= require ('../templates/Header.php'); ?>    
-
+<?= require ('../templates/Header.php'); 
+    require ('../Controller/controllers.views/registro.controller.php');
+?>
     <div class="main-panel">
     <?= require ('../templates/nav.php'); ?>
     
@@ -13,12 +14,16 @@
                   <p class="card-category">Complete your profile</p>
                 </div>
                 <div class="card-body"> 
-                  <form>
+                  <form action="../Controller/controllers.views/registro.controller.php" method="post">
                     <div class="row">
                       <div class="col-md-5">
                         <div class="form-group">
                           <label class="bmd-label-floating">Company (disabled)</label>
-                          <input type="text" class="form-control" disabled>
+                          <select class="form-control">
+                              <option value="0">Seleccione..</option>
+                              <?= cbx_empresa("empresa",$mysqli); ?>
+                          </select>
+                          <!--<input type="text" class="form-control" disabled>-->
                         </div>
                       </div>
                       <div class="col-md-3">
