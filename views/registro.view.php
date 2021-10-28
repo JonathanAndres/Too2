@@ -21,7 +21,7 @@
                           <label class="bmd-label-floating">Company (disabled)</label>
                           <select class="form-control">
                               <option value="0">Seleccione..</option>
-                              <?= cbx_empresa("empresa",$mysqli); ?>
+                              <?= cbx($var,$mysqli); ?>
                           </select>
                           <!--<input type="text" class="form-control" disabled>-->
                         </div>

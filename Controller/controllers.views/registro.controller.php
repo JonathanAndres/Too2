@@ -1,13 +1,13 @@
 <?php 
-    require ("../Controller/DBA/conexionDBA.php");
+    require ("../Controller/DBA/function.dba.php");
+    
+    //......ComboBox........
+    $var = array();
+    $var[0] = "ruc";
+    $var[1] = "nombre";
+    $var[2] = "empresa";
+    //..........END.........
 
-
-    function cbx_empresa($dat_cbx,$mysqli)
-    {
-        $query = $mysqli -> query("Select ruc,nombre From ".$dat_cbx);
-        while($valores = mysqli_fetch_array($query)){
-            echo '<option value="'.$valores["ruc"].'">'.$valores["nombre"].'</option>';
-        }
-    }
+    
 
 ?>
