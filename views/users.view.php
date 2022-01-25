@@ -17,33 +17,54 @@
                   <p class="card-category">Complete your profile</p>
                 </div>
                 <div class="card-body"> 
-                <button class="btn btn-primary pull-left" onclick='window.open("./registro.view.php","","width=500,height=500")'>
+                <button class="btn btn-primary pull-left" onclick='window.open("./registroPerson.view.php","","width=500,height=500")'>
                   registro
                 </button>
                 <div class="table-responsive">
                     <table class="table">
                       <thead class=" text-primary">
-                        <th>
+                        <th style='text-align: center;'>
                           Ruc
                         </th>
-                        <th>
+                        <th style='text-align: center;'>
                           Nombre
                         </th>
-                        <th>
+                        <th style='text-align: center;'>
                           Cuidad
                         </th>
-                        <th>
-                          Direccion
-                        </th>
-                        <th>
+                        <th style='text-align: center;'>
                           Telefono
                         </th>
-                        <th>
+                        <th style='text-align: center;'>
                           Opciones
                         </th>
                       </thead>
                       <tbody>
-                        <?= dtgrd("empresa",$mysqli); ?>
+                        <?php //dtgrd("personaVIEW",$mysqli); ?>
+                        <?php $query = $mysqli -> query("Select * From personaVIEW");
+                            while($row = mysqli_fetch_array($query))
+                            { ?>
+
+                        <tr>
+                          <td style='text-align: center;'>
+                              <?php echo $row[0] ?>
+                          </td>
+                          <td style='text-align: center;'>
+                              <?php echo $row[1] ?>
+                          </td>
+                          <td style='text-align: center;'>
+                              <?php echo $row[2] ?>
+                          </td>
+                          <td style='text-align: center;'>
+                              <?php echo $row[3] ?>
+                          </td>
+                          <td style='text-align: center;'>
+                           <a href='javascript:window.open("../views/registroPerson.view.php?id=<?php echo $row[0] ?>","","width=500,height=500")'> <img src='../assets/img/icons/edit.png' width='20'  /> </a>
+                           <a href='javascript:window.open("../views/registroPerson.view.php?id=<?php echo $row[0] ?>","","width=500,height=500")'> <img src='../assets/img/icons/delete.png' width='20'  /> </a>
+                        </td>
+                        </tr>          
+
+                          <?php } ?>
                       </tbody>
                     </table>
                   </div>

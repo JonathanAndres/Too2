@@ -14,27 +14,31 @@
         $query = $mysqli -> query("Select * From ".$var);
         while($row = mysqli_fetch_array($query))
         {
-            echo "  <tr>
-                        <td>
+            echo '  <tr>
+                        <td style="text-align: center;"> 
                             ".$row[0]."
                         </td>
-                        <td>
+                        <td style="text-align: center;">
                             ".$row[1]."
                         </td>
-                        <td>
+                        <td style="text-align: center;">
                             ".$row[2]."
                         </td>
-                        <td>
+                        <td class="text-primary" style="text-align: center;">
                             ".$row[3]."
                         </td>
-                        <td class='text-primary'>
-                            ".$row[4]."
+                        <td style="text-align: center;">
+                        <a href="javascript:window.open("../views/registroPerson.view.php","","width=500,height=500")"> <img src="../assets/img/icons/edit.png" width="20"  /> </a>
+                           <img src="../assets/img/icons/delete.png" width="20"  />
                         </td>
-                        <td>
-                            aqui deben ir otra cosa
-                        </td>
-                    </tr>";
+                    </tr>';
         }
+    }
+
+    function VecDatos($var,$mysqli,$id){
+        $query = $mysqli -> query("Select * From ".$var." WHERE Cedula = '".$id."' ");
+        $VectorDatos = mysqli_fetch_array($query);
+        return $VectorDatos;
     }
 
 ?>
