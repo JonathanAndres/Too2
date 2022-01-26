@@ -1,6 +1,6 @@
 <?php
 $servername = "localhost";
-$database = "Too2";
+$database = "piscinas";
 $username = "root";
 $password = "";
 // Create connection

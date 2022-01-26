@@ -36,7 +36,7 @@
     }
 
     function VecDatos($var,$mysqli,$id){
-        $query = $mysqli -> query("Select * From ".$var." WHERE Cedula = '".$id."' ");
+        $query = $mysqli -> query("Select * From ".$var." WHERE id = '".$id."' ");
         $VectorDatos = mysqli_fetch_array($query);
         return $VectorDatos;
     }
