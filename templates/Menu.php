@@ -36,19 +36,19 @@
           <li class="nav-item ">
             <a class="nav-link" href="./guia.view.php">
               <i class="material-icons">content_paste</i>
-              <p>Guias</p>
+              <p>Facturar</p>
             </a>
           </li>
           <li class="nav-item ">
             <a class="nav-link" href="./contracts.view.php">
               <i class="material-icons">library_books</i>
-              <p>Contartos</p>
+              <p>Productos</p>
             </a>
           </li>
           <li class="nav-item ">
             <a class="nav-link" href="./inventario.view.php">
               <i class="material-icons">bubble_chart</i>
-              <p>Inventario</p>
+              <p>Usuarios</p>
             </a>
           </li>
           <!--<li class="nav-item ">
@@ -58,23 +58,23 @@
             </a>
           </li>-->
           <li class="nav-item ">
-            <a class="nav-link" href="./avisos.view.php">
-              <i class="material-icons">notifications</i>
-              <p>Notificaciones</p>
+            <a class="nav-link" href="./rtl.html">
+              <i class="material-icons">picture_as_pdf</i>
+              <p>Reportes</p>
             </a>
           </li>
-          <!--<li class="nav-item ">
-            <a class="nav-link" href="./rtl.html">
-              <i class="material-icons">language</i>
-              <p>RTL Support</p>
+          <li class="nav-item active-pro">
+            <a class="nav-link" href="./avisos.view.php">
+              <i class="material-icons">notifications</i>
+              <p>Ayuda</p>
             </a>
-          </li>-->
-          <li class="nav-item active-pro ">
+          </li>
+          <!-- <li class="nav-item active-pro ">
             <a class="nav-link" href="./inicio.view.php">
               <i class="material-icons">unarchive</i>
               <p>Ventas Proximamente</p>
             </a>
-          </li>
+          </li> -->
         </ul>
       </div>
     </div>

@@ -1,99 +1,75 @@
 <?= require ('../templates/Header.php'); ?>
-<?= require ('../templates/Menu.php'); ?>    
+<?= require ('../templates/Menu.php'); ?>
+<?= require ('../Controller/controllers.views/Quotations.controller.php'); ?>     
 
     <div class="main-panel">
     <?= require ('../templates/nav.php'); ?> 
       <div class="content">
         <div class="container-fluid">
           <div class="row">
-            <div class="col-md-8">
+            <div class="col-md-12">
               <div class="card">
                 <div class="card-header card-header-primary">
-                  <h4 class="card-title">GUIAS</h4>
-                  <p class="card-category">Complete your profile</p>
+                  <h4 class="card-title">FACTURAS</h4>
+                  <p class="card-category">Informe Facturación</p>
                 </div>
-                <div class="card-body">
-                  <!-- <form>
-                    <div class="row">
-                      <div class="col-md-5">
-                        <div class="form-group">
-                          <label class="bmd-label-floating">Company (disabled)</label>
-                          <input type="text" class="form-control" disabled>
-                        </div>
-                      </div>
-                      <div class="col-md-3">
-                        <div class="form-group">
-                          <label class="bmd-label-floating">Username</label>
-                          <input type="text" class="form-control">
-                        </div>
-                      </div>
-                      <div class="col-md-4">
-                        <div class="form-group">
-                          <label class="bmd-label-floating">Email address</label>
-                          <input type="email" class="form-control">
-                        </div>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-md-6">
-                        <div class="form-group">
-                          <label class="bmd-label-floating">Fist Name</label>
-                          <input type="text" class="form-control">
-                        </div>
-                      </div>
-                      <div class="col-md-6">
-                        <div class="form-group">
-                          <label class="bmd-label-floating">Last Name</label>
-                          <input type="text" class="form-control">
-                        </div>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-md-12">
-                        <div class="form-group">
-                          <label class="bmd-label-floating">Adress</label>
-                          <input type="text" class="form-control">
-                        </div>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-md-4">
-                        <div class="form-group">
-                          <label class="bmd-label-floating">City</label>
-                          <input type="text" class="form-control">
-                        </div>
-                      </div>
-                      <div class="col-md-4">
-                        <div class="form-group">
-                          <label class="bmd-label-floating">Country</label>
-                          <input type="text" class="form-control">
-                        </div>
-                      </div>
-                      <div class="col-md-4">
-                        <div class="form-group">
-                          <label class="bmd-label-floating">Postal Code</label>
-                          <input type="text" class="form-control">
-                        </div>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-md-12">
-                        <div class="form-group">
-                          <label>About Me</label>
-                          <div class="form-group">
-                            <label class="bmd-label-floating"> Lamborghini Mercy, Your chick she so thirsty, I'm in that two seat Lambo.</label>
-                            <textarea class="form-control" rows="5"></textarea>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <button type="submit" class="btn btn-primary pull-right">Update Profile</button>
-                    <div class="clearfix"></div>
-                  </form>-->
+                <div class="card-body"> 
+                  <button class="btn btn-primary pull-left" onclick='window.open("./newQuotation.view.php","","width=800,height=600")'>
+                    Nueva Factura 
+                  </button>
+                  <div class="table-responsive">
+                    <table class="table">
+                      <thead class=" text-primary">
+                        <th style='text-align: center;'>
+                          Num. Factura
+                        </th>
+                        <th style='text-align: center;'>
+                          Cliente
+                        </th>
+                        <th style='text-align: center;'>
+                          Fecha
+                        </th>
+                        <th style='text-align: center;'>
+                          Total Venta
+                        </th>
+                        <th style='text-align: center;'>
+                          Opciones
+                        </th>
+                      </thead>
+                      <tbody>
+                        <?php //dtgrd("personaVIEW",$mysqli); ?>
+                        <?php $query = $mysqli -> query("Select * From Factura_Table");
+                            while($row = mysqli_fetch_array($query))
+                            { ?>
+
+                        <tr>
+                          <td style='text-align: center;'>
+                              <?php echo $row[1] ?>
+                          </td>
+                          <td style='text-align: center;'>
+                              <?php echo $row[2] ?>
+                          </td>
+                          <td style='text-align: center;'>
+                              <?php echo $row[3] ?>
+                          </td>
+                          <td style='text-align: center;'>
+                              <?php echo $row[4] ?>
+                          </td>
+                          <td style='text-align: center;'>
+                           <a href='javascript:window.open("../views/registroPerson.view.php?id=<?php //echo $row[0] ?>","","width=500,height=500")'> <img src='../assets/img/icons/imprimir.png' width='25'  /> </a>
+                           <a href='javascript:window.open("../views/registroPerson.view.php?id=<?php //echo $row[0] ?>","","width=500,height=500")'> <img src='../assets/img/icons/edit.png' width='25'  /> </a>
+                           <a href='javascript:window.open("../views/registroPerson.view.php?id=<?php //echo $row[0] ?>","","width=500,height=500")'> <img src='../assets/img/icons/delete.png' width='25'  /> </a>
+                        </td>
+                        </tr>          
+
+                          <?php } ?>
+                      </tbody>
+                    </table>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="col-md-4">
+            <!-- <div class="col-md-4">
               <div class="card card-profile">
                 <div class="card-avatar">
                   <a href="javascript:;">
@@ -107,10 +83,10 @@
                     First System bussines Too2, bussines dedicate to develop system for 
                     all people, mission is cripto-system whit wallet.
                   </p>
-                  <!--<a href="javascript:;" class="btn btn-primary btn-round">Follow</a>-->
+                  <a href="javascript:;" class="btn btn-primary btn-round">Follow</a>
                 </div>
               </div>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>

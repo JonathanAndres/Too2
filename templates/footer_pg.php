@@ -1,7 +1,7 @@
-<footer class="footer">
+      <footer class="footer">
         <div class="container-fluid">
           <nav class="float-left">
-            <ul>
+            <!-- <ul>
               <li>
                 <a href="#">
                   Creative Tim
@@ -22,14 +22,16 @@
                   Licenses
                 </a>
               </li>
-            </ul>
+            </ul> -->
           </nav>
           <div class="copyright float-right">
             &copy;
             <script>
               document.write(new Date().getFullYear())
-            </script>, made with <i class="material-icons">favorite</i> by
+            </script>, made with by
             <a href="#" target="_blank">Too2</a> for a better web.
           </div>
         </div>
       </footer>
+
+      <!-- <i class="material-icons">favorite</i>  -->

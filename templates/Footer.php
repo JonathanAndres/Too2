@@ -19,7 +19,7 @@
             <div class="clearfix"></div>
           </a>
         </li>
-        <li class="header-title">Images</li>
+        <!-- <li class="header-title">Images</li>
         <li class="active">
           <a class="img-holder switch-trigger" href="javascript:void(0)">
             <img src="../assets/img/sidebar-1.jpg" alt="">
@@ -42,7 +42,7 @@
         </li>
         <li class="button-container">
           <a href="https://www.creative-tim.com/product/material-dashboard" target="_blank" class="btn btn-primary btn-block">Free Download</a>
-        </li>
+        </li> -->
         <!-- <li class="header-title">Want more components?</li>
             <li class="button-container">
                 <a href="https://www.creative-tim.com/product/material-dashboard-pro" target="_blank" class="btn btn-warning btn-block">

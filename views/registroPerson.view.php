@@ -1,6 +1,6 @@
 <?= require ('../templates/Header.php'); 
     require ('../Controller/controllers.views/registro.controller.php');
-    $vecotor = VecDatos("persona",$mysqli,$_GET["id"]);
+    $vecotor = VecDatos("cliente",$mysqli,$_GET["id"]);
 ?>
     <div class="main-panel">
     <?= require ('../templates/nav.php'); ?>

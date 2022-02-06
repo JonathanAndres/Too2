@@ -17,10 +17,10 @@
                   <p class="card-category">Complete your profile</p>
                 </div>
                 <div class="card-body"> 
-                <button class="btn btn-primary pull-left" onclick='window.open("./registroPerson.view.php","","width=500,height=500")'>
-                  registro
-                </button>
-                <div class="table-responsive">
+                  <button class="btn btn-primary pull-left" onclick='window.open("./registroPerson.view.php","","width=500,height=500")'>
+                    registro
+                  </button>
+                  <div class="table-responsive">
                     <table class="table">
                       <thead class=" text-primary">
                         <th style='text-align: center;'>
@@ -71,14 +71,14 @@
                 </div>
               </div>
             </div>
-            <!--<div class="col-md-4">
+            <div class="col-md-4">
               <div class="card card-profile">
                 <div class="card-avatar">
                   <a href="javascript:;">
                     <img class="img" src="../assets/img/faces/marc.jpg" />
                   </a>
                 </div>
-                <div class="card-body">
+                <!-- <div class="card-body">
                   <h6 class="card-category text-gray">CEO / Partner Fundation</h6>
                   <h4 class="card-title">Andres</h4>
                   <p class="card-description">
@@ -86,9 +86,9 @@
                     all people, mission is cripto-system whit wallet.
                   </p>
                   <a href="javascript:;" class="btn btn-primary btn-round">Follow</a>
-                </div>
+                </div> -->
               </div>
-            </div>-->
+            </div>
           </div>
         </div>
       </div>
