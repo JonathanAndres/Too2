@@ -40,8 +40,9 @@
                         </th>
                       </thead>
                       <tbody>
-                        <?php //dtgrd("personaVIEW",$mysqli); ?>
-                        <?php $query = $mysqli -> query("Select * From cliente");
+                      
+                        <?php
+                        $query = $mysqli -> query("Select * From cliente");
                             while($row = mysqli_fetch_array($query))
                             { ?>
 

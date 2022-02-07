@@ -296,6 +296,32 @@
       });
     });
   </script>
+
+
+<script type="text/javascript">
+
+function Confirmation() {
+
+ 	if (confirm('Esta seguro de eliminar el registro?')==true) {
+	    alert('El registro ha sido eliminado correctamente!!!');
+      return true;
+	}else{
+    //alert('Cancelo la eliminacion');
+    return false;
+	}
+
+}
+
+</script>
+
+<script>
+			$('#confirm-delete').on('show.bs.modal', function(e) {
+				$(this).find('.btn-ok').attr('href', $(e.relatedTarget).data('href'));
+				
+				$('.debug-url').html('Delete URL: <strong>' + $(this).find('.btn-ok').attr('href') + '</strong>');
+			});
+		</script>	
+
 </body>
 
 </html>
