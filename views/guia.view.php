@@ -58,7 +58,7 @@ require("../Controller/DBA/conexionDBA.php"); ?>
                           </td>
                           <td style='text-align: center;'>
                            <a href='javascript:window.open("../report/detalle.fact.report.php?id=<?php echo $row[1] ?>","","width=500,height=500")'> <img src='../assets/img/icons/imprimir.png' width='25'  /> </a>
-                           <a href='javascript:window.open("../views/registroPerson.view.php?id=<?php echo $row[0] ?>","","width=500,height=500")'> <img src='../assets/img/icons/edit.png' width='25'  /> </a>
+                           <!-- <a href='javascript:window.open("../views/registroPerson.view.php?id=<?php //echo $row[0] ?>","","width=500,height=500")'> <img src='../assets/img/icons/edit.png' width='25'  /> </a> -->
                            <a href='javascript:window.open("../views/registroPerson.view.php?id=<?php echo $row[0] ?>","","width=500,height=500")'> <img src='../assets/img/icons/delete.png' width='25'  /> </a>
                         </td>
                         </tr>          
