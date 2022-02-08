@@ -9,6 +9,7 @@
         }
     }
 
+
     function dtgrd($var,$mysqli)
     {
         $query = $mysqli -> query("Select * From ".$var);

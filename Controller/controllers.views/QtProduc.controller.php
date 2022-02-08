@@ -10,7 +10,7 @@ $query = "SELECT * FROM producto WHERE CodBarras = '" . $q . "'";
 $result = $mysqli->query($query);
 
 $row = mysqli_fetch_array($result);
-$id = $row['CodBarras'];
+$id = $row['id'];
 $name = $row['NombreProducto'];
 $price = $row['precio'];
 

@@ -1,5 +1,8 @@
 <?= require ('../templates/Header.php'); 
-    //require ('../Controller/controllers.views/registro.controller.php');
+    require ('../Controller/DBA/function.dba.php');
+    require ('../Controller/DBA/conexionDBA.php');
+    $array = ['id','Nombre','cliente_cbx'];
+    $arrayCLI = ['CodBarras','NombreProducto','producto'];
 ?>
     
     <div class="main-panel">
@@ -15,7 +18,7 @@
                   <p class="card-category">Complete your profile</p>
                 </div>
                 <div class="card-body"> 
-                  <form action="../Controller/controllers.views/Person.controller.php" method="POST">
+                  <form action="../Controller/controllers.views/SaveQt.controller.php" method="POST">
 
                     <fieldset>
 
@@ -26,10 +29,14 @@
                       <div class="row">
                         <div class="col-md-4">
                           <div class="form-group">
-                            <label class="bmd-label-floating">Cliente</label>
+                            <label class="bmd-label-floating">Numero Factura</label>
+                            <input type="text" class="form-control" name="numFac" id="numFac" value="<?php echo rand(100, 1000); ?>">
+                          </div>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="form-group">
                             <select name="Cli_codigo" id="Cli_codigo" class="form-control" onchange="showUser(this.value)">
-                              <option value="17578231" >Andres Alocoser</option>
-                              <option value="17578231" >17578231</option>
+                              <?=  cbx($array,$mysqli); ?>
                             </select>
                           </div>
                         </div>
@@ -67,9 +74,8 @@
                         <div class="col-md-4">
                           <div class="form-group">
                             <label class="bmd-label-floating">Productos</label>
-                            <select name="Cli_codigo" id="Cli_codigo" class="form-control" onchange="showProduc(this.value)">
-                              <option value="1010101" >LLantas</option>
-                              <option value="1010110" >Refri</option>
+                            <select name="Cli_pro" id="Cli_pro" class="form-control" onchange="showProduc(this.value)">
+                              <?=  cbx($arrayCLI,$mysqli); ?>
                             </select>
                           </div>
                         </div>
@@ -85,14 +91,14 @@
                                     <th width="15%">Precio</th>								
                                     <th width="15%">Total</th>
                                 </tr>							
-                                <tr>
+                                <!-- <tr>
                                     <td><input class="itemRow" type="checkbox"></td>
                                     <td><input type="text" name="productCode[]" id="productCode_1" class="form-control" autocomplete="off"></td>
                                     <td><input type="text" name="productName[]" id="productName_1" class="form-control" autocomplete="off"></td>			
                                     <td><input type="number" name="quantity[]" id="quantity_1" class="form-control quantity" autocomplete="off"></td>
                                     <td><input type="number" name="price[]" id="price_1" class="form-control price" autocomplete="off"></td>
                                     <td><input type="number" name="total[]" id="total_1" class="form-control total" autocomplete="off"></td>
-                                </tr>						
+                                </tr>-->
                             </table>
                         </div>
                       </div>
@@ -112,7 +118,7 @@
                         <div class="col-md-4">
                           <div class="form-group">
                             <label class="bmd-label-floating">Subtotal:</label>
-                            <input type="number" disabled="true" class="form-control" name="subTotal" id="subTotal" >
+                            <input type="number" class="form-control" name="subTotal" id="subTotal" maxlength="4" >
                           </div>
                         </div>
                       </div>
@@ -120,7 +126,7 @@
                         <div class="col-md-4">
                           <div class="form-group">
                             <label class="bmd-label-floating">Tasa Impuesto:</label>
-                            <input type="number" class="form-control" name="taxRate" id="taxRate" Value="12" >
+                            <input type="number" class="form-control" name="taxRate" id="taxRate" Value="12" maxlength="4" >
                           </div>
                         </div>
                       </div>
@@ -128,7 +134,7 @@
                         <div class="col-md-4">
                           <div class="form-group">
                             <label class="bmd-label-floating">Monto Inpuesto:</label>
-                            <input type="number" disabled="true" class="form-control" name="taxAmount" id="taxAmount" >
+                            <input type="number" class="form-control" name="taxAmount" id="taxAmount" maxlength="4" >
                           </div>
                         </div>
                       </div>
@@ -136,7 +142,7 @@
                         <div class="col-md-4">
                           <div class="form-group">
                             <label class="bmd-label-floating">Total:</label>
-                            <input type="number" disabled="True" class="form-control" name="totalAftertax" id="totalAftertax" >
+                            <input type="number" class="form-control" name="totalAftertax" id="totalAftertax" maxlength="4">
                           </div>
                         </div>
                       </div>

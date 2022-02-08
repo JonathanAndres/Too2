@@ -86,9 +86,9 @@ function calculateTotal(){
 	var taxRate = $("#taxRate").val();
 	var subTotal = $('#subTotal').val();	
 	if(subTotal) {
-		var taxAmount = subTotal*taxRate/100;
+		var taxAmount = Math.trunc((subTotal*taxRate/100));
 		$('#taxAmount').val(taxAmount);
-		subTotal = parseFloat(subTotal)+parseFloat(taxAmount);
+		subTotal = Math.trunc((parseFloat(subTotal)+parseFloat(taxAmount)));
 		$('#totalAftertax').val(subTotal);		
 		var amountPaid = $('#amountPaid').val();
 		var totalAftertax = $('#totalAftertax').val();	

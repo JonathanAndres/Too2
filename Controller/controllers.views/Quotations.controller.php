@@ -1,7 +1,7 @@
 <?php
 require("../DBA/conexionDBA.php");
 $q = intval($_GET['q']);
-$query = $mysqli->query("SELECT * FROM cliente WHERE Cedula = '".$q."'");
+$query = $mysqli->query("SELECT * FROM cliente WHERE id = '".$q."'");
 $valores = mysqli_fetch_array($query);
 //echo '<option value="' . $valores[1] . '">' . $valores[2] . '</option>';
 
