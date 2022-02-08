@@ -40,7 +40,7 @@
             </a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="./contracts.view.php">
+            <a class="nav-link" href="./productos.view.php">
               <i class="material-icons">library_books</i>
               <p>Productos</p>
             </a>

@@ -6,7 +6,7 @@
       <div class="content">
         <div class="container-fluid">
           <div class="row">
-            <div class="col-md-8">
+            <div class="col-md-12">
               <div class="card">
                 <div class="card-header card-header-primary">
                   <h4 class="card-title">INICIO</h4>
@@ -93,7 +93,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-4">
+            <!-- <div class="col-md-4">
               <div class="card card-profile">
                 <div class="card-avatar">
                   <a href="javascript:;">
@@ -107,10 +107,10 @@
                     First System bussines Too2, bussines dedicate to develop system for 
                     all people, mission is cripto-system whit wallet.
                   </p>
-                  <!--<a href="javascript:;" class="btn btn-primary btn-round">Follow</a>-->
+                  <a href="javascript:;" class="btn btn-primary btn-round">Follow</a>
                 </div>
               </div>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
