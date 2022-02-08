@@ -58,7 +58,7 @@
             </a>
           </li>-->
           <li class="nav-item ">
-            <a class="nav-link" href="./rtl.html">
+            <a class="nav-link" href="./Reportes.view.php">
               <i class="material-icons">picture_as_pdf</i>
               <p>Reportes</p>
             </a>
