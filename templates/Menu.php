@@ -45,12 +45,12 @@
               <p>Productos</p>
             </a>
           </li>
-          <li class="nav-item ">
+          <!-- <li class="nav-item ">
             <a class="nav-link" href="./inventario.view.php">
               <i class="material-icons">bubble_chart</i>
               <p>Usuarios</p>
             </a>
-          </li>
+          </li> -->
           <!--<li class="nav-item ">
             <a class="nav-link" href="./map.html">
               <i class="material-icons">location_ons</i>
