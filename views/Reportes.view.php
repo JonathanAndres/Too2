@@ -10,30 +10,20 @@
             <div class="col-md-12">
               <div class="card">
                 <div class="card-header card-header-primary">
-                  <h4 class="card-title">FACTURAS</h4>
-                  <p class="card-category">Informe Facturación</p>
+                  <h4 class="card-title">REPORTES</h4>
+                  <p class="card-category">Información de cada reporte</p>
                 </div>
                 <div class="card-body"> 
-                  <button class="btn btn-primary pull-left" onclick='window.open("./newQuotation.view.php","","width=800,height=600")'>
-                    Nueva Factura 
-                  </button>
-                  <button class="btn btn-primary pull-left" onclick='window.open("./newQuotation.view.php","","width=800,height=600")'>
-                    Nueva Factura 
-                  </button>
+                  
+                  
                   <div class="table-responsive">
                     <table class="table">
                       <thead class=" text-primary">
                         <th style='text-align: center;'>
-                          Num. Factura
+                          Reporte
                         </th>
                         <th style='text-align: center;'>
-                          Cliente
-                        </th>
-                        <th style='text-align: center;'>
-                          Fecha
-                        </th>
-                        <th style='text-align: center;'>
-                          Total Venta
+                          Decripcion
                         </th>
                         <th style='text-align: center;'>
                           Opciones
@@ -47,24 +37,115 @@
 
                         <tr>
                           <td style='text-align: center;'>
+                          <label for="">CLIENTES</label>
                               <?php //echo $row[1] ?>
                           </td>
                           <td style='text-align: center;'>
-                              <?php //echo $row[2] ?>
+                              <label for="">Descripción del primer reporte</label>
                           </td>
+                          
                           <td style='text-align: center;'>
-                              <?php //echo $row[3] ?>
-                          </td>
-                          <td style='text-align: center;'>
-                              <?php //echo $row[4] ?>
-                          </td>
-                          <td style='text-align: center;'>
-                           <a href='javascript:window.open("../views/registroPerson.view.php?id=<?php //echo $row[0] ?>","","width=500,height=500")'> <img src='../assets/img/icons/imprimir.png' width='25'  /> </a>
-                           <a href='javascript:window.open("../views/registroPerson.view.php?id=<?php //echo $row[0] ?>","","width=500,height=500")'> <img src='../assets/img/icons/edit.png' width='25'  /> </a>
-                           <a href='javascript:window.open("../views/registroPerson.view.php?id=<?php //echo $row[0] ?>","","width=500,height=500")'> <img src='../assets/img/icons/delete.png' width='25'  /> </a>
-                        </td>
+                          
+                           <a href='javascript:window.open("../report/report.clientes.php?id=<?php //echo $row[0] ?>","","width=500,height=500")'> <img src='../assets/img/icons/imprimir.png' width='25'  /> </a>
+                           
+                            </td>
                         </tr>          
-
+                        <tr>
+                          <td style='text-align: center;'>
+                          <label for="">PRODUCTOS</label>
+                              <?php //echo $row[1] ?>
+                          </td>
+                          <td style='text-align: center;'>
+                              <label for="">Descripción del segundo reporte</label>
+                          </td>
+                          
+                          <td style='text-align: center;'>
+                           <a href='javascript:window.open("../report/report.productos.php?id=<?php //echo $row[0] ?>","","width=500,height=500")'> <img src='../assets/img/icons/imprimir.png' width='25'  /> </a>
+                           
+                            </td>
+                        </tr>     
+                        <tr>
+                          <td style='text-align: center;'>
+                          <label for="">FACTURAS</label>
+                              <?php //echo $row[1] ?>
+                          </td>
+                          <td style='text-align: center;'>
+                              <label for="">Descripción del tercer reporte</label>
+                          </td>
+                          
+                          <td style='text-align: center;'>
+                           <a href='javascript:window.open("../report/report.facturas.php?id=<?php //echo $row[0] ?>","","width=500,height=500")'> <img src='../assets/img/icons/imprimir.png' width='25'  /> </a>
+                          
+                            </td>
+                        </tr> 
+                        <tr>
+                          <td style='text-align: center;'>
+                          <label for="">CLIENTE ESPECIFICO</label>
+                              <?php //echo $row[1] ?>
+                          </td>
+                          <td style='text-align: center;'>
+                              <label for="">Descripción del cuarto reporte</label>
+                          </td>
+                          
+                          <td style='text-align: center;'>
+                           <a href='javascript:window.open("../report/report.cliente.carlos.php?id=<?php //echo $row[0] ?>","","width=500,height=500")'> <img src='../assets/img/icons/imprimir.png' width='25'  /> </a>
+                           
+                        </tr> 
+                        <tr>
+                          <td style='text-align: center;'>
+                          <label for="">KARDEX</label>
+                              <?php //echo $row[1] ?>
+                          </td>
+                          <td style='text-align: center;'>
+                              <label for="">Descripción del quinto reporte</label>
+                          </td>
+                          
+                          <td style='text-align: center;'>
+                           <a href='javascript:window.open("../report/report.kardex.php?id=<?php //echo $row[0] ?>","","width=500,height=500")'> <img src='../assets/img/icons/imprimir.png' width='25'  /> </a>
+                           
+                            </td>
+                        </tr> 
+                        <tr>
+                          <td style='text-align: center;'>
+                          <label for="">PRODUCTO EN ESPECIFICO</label>
+                              <?php //echo $row[1] ?>
+                          </td>
+                          <td style='text-align: center;'>
+                              <label for="">Descripción del sexto reporte</label>
+                          </td>
+                          
+                          <td style='text-align: center;'>
+                           <a href='javascript:window.open("../report/report.productespe.php?id=<?php //echo $row[0] ?>","","width=500,height=500")'> <img src='../assets/img/icons/imprimir.png' width='25'  /> </a>
+                           
+                            </td>
+                        </tr>  
+                        <tr>
+                          <td style='text-align: center;'>
+                          <label for="">FACTURA POR ESTADO</label>
+                              <?php //echo $row[1] ?>
+                          </td>
+                          <td style='text-align: center;'>
+                              <label for="">Descripción del septimo reporte</label>
+                          </td>
+                          
+                          <td style='text-align: center;'>
+                           <a href='javascript:window.open("../report/report.factu.fecha.php?id=<?php //echo $row[0] ?>","","width=500,height=500")'> <img src='../assets/img/icons/imprimir.png' width='25'  /> </a>
+                           
+                            </td>
+                        </tr>  
+                        <tr>
+                          <td style='text-align: center;'>
+                          <label for="">DIRECCIÓN</label>
+                              <?php //echo $row[1] ?>
+                          </td>
+                          <td style='text-align: center;'>
+                              <label for="">Descripción del octavo reporte</label>
+                          </td>
+                          
+                          <td style='text-align: center;'>
+                           <a href='javascript:window.open("..report/report.cliente.dire.php?id=<?php //echo $row[0] ?>","","width=500,height=500")'> <img src='../assets/img/icons/imprimir.png' width='25'  /> </a>
+                           
+                        </tr>    
                           <?php //} ?>
                       </tbody>
                     </table>
