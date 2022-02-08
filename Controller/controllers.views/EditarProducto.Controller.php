@@ -14,8 +14,9 @@ include ("../DBA/conexionDBA.php");
         $cantidad = $_POST ['cantidad'];
         $imagen = $_POST ['imagen'];
 
+        echo $imagen;
 
-        $query = "UPDATE  producto SET  CodBarras= '$CodBarras', Descripcion='$Descripcion', NombreProducto='$NombreProducto', precio='$precio',tipo='$tipo', cantidad='$cantidad', imagen='$imagen' where id ='$id'" ;
+        $query = "UPDATE  producto SET  CodBarras= '$CodBarras', Descripcion='$Descripcion', NombreProducto='$NombreProducto', precio='$precio',tipo='$tipo', cantidad='$cantidad', image='$imagen' where id ='$id'" ;
         $ejecuta = $mysqli->query($query);
        
 
