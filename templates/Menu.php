@@ -64,7 +64,7 @@
             </a>
           </li>
           <li class="nav-item active-pro">
-            <a class="nav-link" href="./avisos.view.php">
+            <a class="nav-link" href="./Ayudainterna.view.php">
               <i class="material-icons">notifications</i>
               <p>Ayuda</p>
             </a>
