@@ -2,7 +2,7 @@
 		
 
 		
-		require ('fpdf/fpdf.php');
+		require ('../fpdf184/fpdf.php');
 	
 		class PDF extends FPDF
         {
@@ -13,10 +13,10 @@
                 $this->Cell(190,15,'Reporte de Factura',1,0,'C');
                 $this->Ln(20);
                 $this->Cell(25,10,'id',1,0,'C');
-		$this->Cell(40,10,'Producto',1,0,'C');
-		$this->Cell(40,10,'Precio',1,0,'C');
-		$this->Cell(40,10,'Cantidad',1,0,'C');
+		$this->Cell(40,10,'ID Cliente',1,0,'C');
+		$this->Cell(40,10,'Fecha',1,0,'C');
 		$this->Cell(40,10,'Total',1,0,'C');
+		$this->Cell(40,10,'Estado',1,0,'C');
 		$this->Ln();
             }
             function Footer()
@@ -28,9 +28,9 @@
 
         }
 
-		require 'conexionDBA.php';
-        $consulta ="SELECT *FROM detalle_factura where 'estado'="pendiente"";
-        $resultado=$mysql->query($consulta);
+		require ("../Controller/DBA/conexionDBA.php");
+        $consulta ="SELECT *FROM cabecera_factura where NumFactura='10'";
+        $resultado=$mysqli->query($consulta);
 
 
 		$pdf = new FPDF();
@@ -41,13 +41,13 @@
 
 
 		
-		while ($row = $resultado->fech_assoc())
+		while ($row = mysqli_fetch_array($resultado))
 		{
-            $pdf->Cell(25,10,'id',1,0,'C');
-            $pdf->Cell(40,10,'Producto',1,0,'C');
-            $pdf->Cell(40,10,'Precio',1,0,'C');
-            $pdf->Cell(40,10,'Cantidad',1,0,'C');
-            $pdf->Cell(40,10,'Total',1,0,'C');
+            $pdf->Cell(25,10,$row['id'],1,0,'C');
+            $pdf->Cell(40,10,$row['id_Cliente'],1,0,'C');
+            $pdf->Cell(40,10,$row['Fecha'],1,0,'C');
+            $pdf->Cell(40,10,$row['TotalVenta'],1,0,'C');
+            $pdf->Cell(40,10,$row['Estado'],1,0,'C');
             $pdf->Ln();
 		}
 		

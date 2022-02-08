@@ -2,7 +2,7 @@
 		
 
 		
-		require ('fpdf/fpdf.php');
+		require ('../fpdf184/fpdf.php');
 	
 		class PDF extends FPDF
         {
@@ -17,6 +17,7 @@
 		$this->Cell(40,10,'Apellido',1,0,'C');
 		$this->Cell(40,10,'Cédula',1,0,'C');
 		$this->Cell(40,10,'Telefono',1,0,'C');
+        $this->Cell(40,10,'Dirección',1,0,'C');
 		$this->Ln();
             }
             function Footer()
@@ -28,9 +29,9 @@
 
         }
 
-		require 'conexionDBA.php';
-        $consulta ="SELECT *FROM cliente where 'Direccion'="Riobamba"";
-        $resultado=$mysql->query($consulta);
+		require ("../Controller/DBA/conexionDBA.php");
+        $consulta ="SELECT *FROM cliente where Direccion='Riobamba'";
+        $resultado=$mysqli->query($consulta);
 
 
 		$pdf = new FPDF();
@@ -41,13 +42,14 @@
 
 
 		
-		while ($row = $resultado->fech_assoc())
+		while ($row = mysqli_fetch_array($resultado))
 		{
-		$pdf->Cell(25,10,$dato['id'],1,0,'C');
-		$pdf->Cell(40,10,$dato['Nombre'],1,0,'C');
-		$pdf->Cell(40,10,$dato['Apellido'],1,0,'C');
-		$pdf->Cell(40,10,$dato['Cédula'],1,0,'C');
-		$pdf->Cell(40,10,$dato['Telefono'],1,0,'C');
+		$pdf->Cell(25,10,$row['id'],1,0,'C');
+		$pdf->Cell(30,10,$row['Nombre'],1,0,'C');
+		$pdf->Cell(30,10,$row['Apellido'],1,0,'C');
+		$pdf->Cell(35,10,$row['Cedula'],1,0,'C');
+		$pdf->Cell(35,10,$row['Telefono'],1,0,'C');
+        $pdf->Cell(35,10,$row['Direccion'],1,0,'C');
 		$pdf->Ln();
 		}
 		
@@ -63,3 +65,4 @@
 	
 
 		?>
+

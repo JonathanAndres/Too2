@@ -46,7 +46,7 @@
                           
                           <td style='text-align: center;'>
                           
-                           <a href='javascript:window.open("../report/report.clientes.php?id=<?php //echo $row[0] ?>","","width=500,height=500")'> <img src='../assets/img/icons/imprimir.png' width='25'  /> </a>
+                           <a href='javascript:window.open("../report/report.cliente.dire.php?id=<?php //echo $row[0] ?>","","width=500,height=500")'> <img src='../assets/img/icons/imprimir.png' width='25'  /> </a>
                            
                             </td>
                         </tr>          
@@ -143,7 +143,7 @@
                           </td>
                           
                           <td style='text-align: center;'>
-                           <a href='javascript:window.open("..report/report.cliente.dire.php?id=<?php //echo $row[0] ?>","","width=500,height=500")'> <img src='../assets/img/icons/imprimir.png' width='25'  /> </a>
+                           <a href='javascript:window.open("../report/report.cliente.dire.php?id=<?php //echo $row[0] ?>","","width=500,height=500")'> <img src='../assets/img/icons/imprimir.png' width='25'  /> </a>
                            
                         </tr>    
                           <?php //} ?>

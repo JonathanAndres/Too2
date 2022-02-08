@@ -2,7 +2,7 @@
 		
 
 		
-		require ('fpdf/fpdf.php');
+		require ('../fpdf184/fpdf.php');
 	
 		class PDF extends FPDF
         {
@@ -28,9 +28,9 @@
 
         }
 
-		require 'conexionDBA.php';
+		require ("../Controller/DBA/conexionDBA.php");
         $consulta ="SELECT *FROM detalle_factura";
-        $resultado=$mysql->query($consulta);
+        $resultado=$mysqli->query($consulta);
 
 
 		$pdf = new FPDF();
@@ -41,13 +41,13 @@
 
 
 		
-		while ($row = $resultado->fech_assoc())
+		while ($row = mysqli_fetch_array($resultado))
 		{
-            $pdf->Cell(25,10,'id',1,0,'C');
-            $pdf->Cell(40,10,'Producto',1,0,'C');
-            $pdf->Cell(40,10,'Precio',1,0,'C');
-            $pdf->Cell(40,10,'Cantidad',1,0,'C');
-            $pdf->Cell(40,10,'Total',1,0,'C');
+            $pdf->Cell(25,10,$row['id'],1,0,'C');
+            $pdf->Cell(40,10,$row['Producto'],1,0,'C');
+            $pdf->Cell(40,10,$row['Precio'],1,0,'C');
+            $pdf->Cell(40,10,$row['Cantidad'],1,0,'C');
+            $pdf->Cell(40,10,$row['Total'],1,0,'C');
             $pdf->Ln();
 		}
 		

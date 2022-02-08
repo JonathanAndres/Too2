@@ -2,7 +2,7 @@
 		
 
 		
-		require ('fpdf/fpdf.php');
+		require ('../fpdf184/fpdf.php');
 	
 		class PDF extends FPDF
         {
@@ -29,9 +29,9 @@
 
         }
 
-		require 'conexionDBA.php';
+		require ("../Controller/DBA/conexionDBA.php");
         $consulta ="SELECT *FROM kardex";
-        $resultado=$mysql->query($consulta);
+        $resultado=$mysqli->query($consulta);
 
 
 		$pdf = new FPDF();
@@ -42,14 +42,14 @@
 
 
 		
-		while ($row = $resultado->fech_assoc())
+		while ($row = mysqli_fetch_array($resultado))
 		{
-            $pdf->Cell(25,10,'id',1,0,'C');
-            $pdf->Cell(40,10,'Descripcion',1,0,'C');
-            $pdf->Cell(40,10,'Fecha',1,0,'C');
-            $pdf->Cell(40,10,'Cantidad',1,0,'C');
-            $pdf->Cell(40,10,'Total',1,0,'C');
-            $pdf->Cell(40,10,'Estado',1,0,'C');
+            $pdf->Cell(25,10,$row['ID'],1,0,'C');
+            $pdf->Cell(40,10,$row['Descripcion'],1,0,'C');
+            $pdf->Cell(40,10,$row['Fecha'],1,0,'C');
+            $pdf->Cell(40,10,$row['cantidad'],1,0,'C');
+            $pdf->Cell(40,10,$row['total'],1,0,'C');
+            $pdf->Cell(40,10,$row['estado'],1,0,'C');
             $pdf->Ln();
 		}
 		
