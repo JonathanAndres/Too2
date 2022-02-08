@@ -72,8 +72,8 @@
                     <div class="row">
                       <div class="col-md-10">
                         <div class="form-group">
-                                  <LABEl>IMAGEN</LABEl>
-                          </div>
+                          <label class="bmd-label-floating">Imagen</label>
+                          <input type="text" class="form-control" name="imagen" >
                         </div>
                       </div>
                     </div>

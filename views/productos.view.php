@@ -87,7 +87,7 @@
                               <?php echo $row[7] ?>
                           </td>
                           </td><td style='text-align: center;'>
-                              <?php echo $row[8] ?>
+                              <img src="<?php echo $row[8] ?>" style="height: 50px;">
                           </td>
                           <td style='text-align: center;'>
                            <a href='javascript:window.open("EditarProducto.view.php?id=<?php echo $row[0] ?>","","width=500,height=500")'> <img  src='../assets/img/icons/edit.png' width='20'  /> </a>

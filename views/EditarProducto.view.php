@@ -55,7 +55,7 @@
                       </div>
                     </div>
                     <div class="row">
-                      <div class="col-md-12">
+                      <div class="col-md-6">
                         <div class="form-group">
                           <label class="bmd-label-floating">Tipo</label>
                           <input type="number" class="form-control" name="tipo" value="<?= $vecotor["tipo"] ?>">
@@ -63,7 +63,7 @@
                       </div>
                     </div>
                     <div class="row">
-                      <div class="col-md-13">
+                      <div class="col-md-6">
                         <div class="form-group">
                           <label class="bmd-label-floating">Estado</label>
                           <input type="text" class="form-control" name="Estado" value="<?= $vecotor["Estado"] ?>">
@@ -71,7 +71,7 @@
                       </div>
                     </div>
                     <div class="row">
-                      <div class="col-md-14">
+                      <div class="col-md-6">
                         <div class="form-group">
                           <label class="bmd-label-floating">Cantidad</label>
                           <input type="number" class="form-control" name="cantidad" value="<?= $vecotor["cantidad"] ?>">
@@ -79,10 +79,10 @@
                       </div>
                     </div>
                     <div class="row">
-                      <div class="col-md-15">
+                      <div class="col-md-6">
                         <div class="form-group">
                           <label class="bmd-label-floating">Imagen</label>
-                          <input type="text" class="form-control" name="imagen" value="<?= $vecotor["imagen"] ?>">
+                          <input type="text" class="form-control" name="imagen" value="<?= $vecotor["image"] ?>">
                         </div>
                       </div>
                     </div>
