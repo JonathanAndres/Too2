@@ -111,6 +111,8 @@
   <!-- Material Dashboard DEMO methods, don't include it in your project! -->
   <script src="../assets/demo/demo.js"></script>
   <!--MODAL-->
+  <script src="../assets/js/invoice.js"></script>
+  <script src="../assets/js/Clients.js"></script>
   <script>
             const open = document.getElementById('open');
             const modal_container = document.getElementById('modal_container');
@@ -296,6 +298,32 @@
       });
     });
   </script>
+
+
+<script type="text/javascript">
+
+function Confirmation() {
+
+ 	if (confirm('Esta seguro de eliminar el registro?')==true) {
+	    alert('El registro ha sido eliminado correctamente!!!');
+      return true;
+	}else{
+    //alert('Cancelo la eliminacion');
+    return false;
+	}
+
+}
+
+</script>
+
+<script>
+			$('#confirm-delete').on('show.bs.modal', function(e) {
+				$(this).find('.btn-ok').attr('href', $(e.relatedTarget).data('href'));
+				
+				$('.debug-url').html('Delete URL: <strong>' + $(this).find('.btn-ok').attr('href') + '</strong>');
+			});
+		</script>	
+
 </body>
 
 </html>

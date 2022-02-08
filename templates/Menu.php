@@ -28,7 +28,7 @@
           </li>
           <!-- "active" sirve para activar visualizacion de estado opcion del menu actual  -->
           <li class="nav-item active ">
-            <a class="nav-link" href="./users.view.php">
+            <a class="nav-link" href="../views/clientes.view.php">
               <i class="material-icons">person</i>
               <p>Clientes</p>
             </a>
@@ -58,7 +58,7 @@
             </a>
           </li>-->
           <li class="nav-item ">
-            <a class="nav-link" href="./rtl.html">
+            <a class="nav-link" href="./Reportes.view.php">
               <i class="material-icons">picture_as_pdf</i>
               <p>Reportes</p>
             </a>

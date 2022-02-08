@@ -1,6 +1,7 @@
 <?= require ('../templates/Header.php'); ?>
-<?= require ('../templates/Menu.php'); ?>
-<?= require ('../Controller/controllers.views/Quotations.controller.php'); ?>     
+<?= require ('../templates/Menu.php');
+require("../Controller/DBA/conexionDBA.php"); ?>
+
 
     <div class="main-panel">
     <?= require ('../templates/nav.php'); ?> 
