@@ -34,7 +34,7 @@
         $resultado=$mysqli->query($consulta);
 
 
-		$pdf = new FPDF();
+		$pdf=new FPDF('L','mm','A4');
         $pdf->AliasNbPages();
 		$pdf->AddPage();
 		$pdf->SetFont('Arial', 'B', 16);

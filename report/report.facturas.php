@@ -12,11 +12,11 @@
                 $this->Cell(60);
                 $this->Cell(190,15,'Reporte de Factura',1,0,'C');
                 $this->Ln(20);
-                $this->Cell(25,10,'id',1,0,'C');
-		$this->Cell(40,10,'Producto',1,0,'C');
-		$this->Cell(40,10,'Precio',1,0,'C');
-		$this->Cell(40,10,'Cantidad',1,0,'C');
-		$this->Cell(40,10,'Total',1,0,'C');
+                $this->Cell(25,10,'ID',1,0,'C');
+		$this->Cell(40,10,'NumFactura',1,0,'C');
+		$this->Cell(30,10,'Cliente',1,0,'C');
+		$this->Cell(25,10,'Fecha',1,0,'C');
+		$this->Cell(30,10,'Total',1,0,'C');
 		$this->Ln();
             }
             function Footer()
@@ -29,7 +29,7 @@
         }
 
 		require ("../Controller/DBA/conexionDBA.php");
-        $consulta ="SELECT *FROM detalle_factura";
+        $consulta ="SELECT *FROM factura_table";
         $resultado=$mysqli->query($consulta);
 
 
@@ -43,11 +43,11 @@
 		
 		while ($row = mysqli_fetch_array($resultado))
 		{
-            $pdf->Cell(25,10,$row['id'],1,0,'C');
-            $pdf->Cell(40,10,$row['Producto'],1,0,'C');
-            $pdf->Cell(40,10,$row['Precio'],1,0,'C');
-            $pdf->Cell(40,10,$row['Cantidad'],1,0,'C');
-            $pdf->Cell(40,10,$row['Total'],1,0,'C');
+            $pdf->Cell(25,10,$row['ID_Factura'],1,0,'C');
+            $pdf->Cell(20,10,$row['NumFactura'],1,0,'C');
+            $pdf->Cell(65,10,$row['Client_Info'],1,0,'C');
+            $pdf->Cell(55,10,$row['Fecha'],1,0,'C');
+            $pdf->Cell(30,10,$row['TotalVenta'],1,0,'C');
             $pdf->Ln();
 		}
 		

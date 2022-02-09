@@ -24,6 +24,7 @@
             $this->SetY(-15);
             $this->SetFont('Arial', 'B', 16);
             $this->Cell(0,10,utf8_decode('Pagina').$this->PageNo().'/{nb}',0,0,'C');
+            $this->Cell(70,10,'Hecho por Marilin Rios',0,0,'C');
         }
 
         }
@@ -33,7 +34,7 @@
         $resultado=$mysqli->query($consulta);
 
 
-		$pdf = new FPDF();
+		$pdf = new FPDF('L','cm','letter');
         $pdf->AliasNbPages();
 		$pdf->AddPage();
 		$pdf->SetFont('Arial', 'B', 16);

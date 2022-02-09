@@ -64,3 +64,16 @@ function showUser(str) {
         });
     });    
   
+/* JUEGO PHP JQUERY */
+
+function envioCBx(cuidad) {
+  window.open("../report/report.cliente.dire.php?cuidad="+cuidad,"","width=500,height=500")
+}
+
+function productoCBx(producti) {
+  window.open("../report/report.productespe.php?id="+producti,"","width=500,height=500")
+}
+
+function clienteCBx(cliente) {
+  window.open("../report/report.cliente.carlos.php?id="+cliente,"","width=500,height=500")
+}

@@ -4,7 +4,7 @@ require ("../DBA/conexionDBA.php");
 
     $Cliente = $_POST['Cli_codigo'];
     $subTotal = $_POST['subTotal'];
-    $iva = $_POST['taxRate'];
+    $iva = $_POST['taxAmount'];
     $total = $_POST['totalAftertax'];
     $numFac = $_POST['numFac'];
 

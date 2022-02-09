@@ -9,6 +9,13 @@
         }
     }
 
+    function cbx2($var,$mysqli)
+    {
+        $query = $mysqli -> query("Select ".$var[0]." From ".$var[1]);
+        while($valores = mysqli_fetch_array($query)){
+            echo '<option value="'.$valores[$var[0]].'">'.$valores[$var[0]].'</option>';
+        }
+    }
 
     function dtgrd($var,$mysqli)
     {

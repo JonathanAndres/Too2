@@ -1,65 +1,46 @@
 <?php
-		
-
-		
-		require ('../fpdf184/fpdf.php');
-	
-		class PDF extends FPDF
-        {
-
-            function Header(){
-                $this->SetFont('Arial', 'B', 16);
-                $this->Cell(60);
-                $this->Cell(190,15,'Reporte de Cliente',1,0,'C');
-                $this->Ln(20);
-                $this->Cell(25,10,'id',1,0,'C');
-                $this->Cell(40,10,'Nombre',1,0,'C');
-		$this->Cell(40,10,'Apellido',1,0,'C');
-		$this->Cell(40,10,'Cédula',1,0,'C');
-		$this->Cell(40,10,'Telefono',1,0,'C');
-		$this->Ln();
-            }
-            function Footer()
-            {
-            $this->SetY(-15);
-            $this->SetFont('Arial', 'B', 16);
-            $this->Cell(0,10,utf8_decode('Pagina').$this->PageNo().'/{nb}',0,0,'C');
-        }
-
-        }
-
-		require ("../Controller/DBA/conexionDBA.php");
-        $consulta ="SELECT *FROM cliente where Nombre='carlos'";
-        $resultado=$mysqli->query($consulta);
 
 
-		$pdf = new FPDF();
-        $pdf->AliasNbPages();
-		$pdf->AddPage();
-		$pdf->SetFont('Arial', 'B', 16);
-		
+
+require('../fpdf184/fpdf.php');
+require("../Controller/DBA/conexionDBA.php");
+$cliente = $_GET['id'];
+
+$consulta = "SELECT *FROM cliente Where id = ".$cliente;
+$resultado = $mysqli->query($consulta);
+$row = mysqli_fetch_array($resultado);
 
 
-		
-		while ($row = mysqli_fetch_array($resultado))
-		{
-		$pdf->Cell(25,10,$row['id'],1,0,'C');
-		$pdf->Cell(40,10,$row['Nombre'],1,0,'C');
-		$pdf->Cell(40,10,$row['Apellido'],1,0,'C');
-		$pdf->Cell(40,10,$row['Cedula'],1,0,'C');
-		$pdf->Cell(40,10,$row['Telefono'],1,0,'C');
-		$pdf->Ln();
-		}
-		
-		
+$pdf = new FPDF();
+$pdf->AddPage();
+$pdf->SetMargins(20,20,20);
+$pdf->Ln(10);
+$pdf->SetFont('Arial','',14);
+$pdf->Cell(120,10,'REPORTE POR CLIENTES',0,0,'R');
+$pdf->Ln(10);
+$pdf->Ln(10);
+$pdf->Cell(30,6,'CODIGO: ',0,0);
+$pdf->Cell(0,6,$row['id'],0,1);
+$pdf->Ln(10);
+$pdf->Cell(30,6,'NOMBRE : ',0,0);
+$pdf->Cell(40,6,$row['Nombre'].' '.$row['Apellido'],0,1);
+$pdf->Ln(10);
+$pdf->Cell(30,6,'CEDULA: ',0,0);
+$pdf->MultiCell(0,6,$row['Cedula'],0,1);
+$pdf->Ln(10);
+$pdf->Cell(35,6,'TELEFONO: ',0,0);
+$pdf->Cell(40,6,$row['Telefono'],0,1);
+$pdf->Ln(10);
+$pdf->Cell(35,6,'CORREO: ',0,0);
+$pdf->Cell(40,6,$row['Correo'],0,1);
+$pdf->Ln(10);
+$pdf->Cell(35,6,'DIRECCION: ',0,0);
+$pdf->Cell(40,6,$row['Direccion'],0,1);
+$pdf->Ln(10);
+$pdf->Ln(10);
+$pdf->Cell(100, 10, utf8_decode('Reporte TOO2_System'), 0, 0); 
+$pdf->Ln(10);
 
-		$pdf->Output();
-		
 
-		
-
-		
-
-	
-
-		?>
+$pdf->Output();
+?>
