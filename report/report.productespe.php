@@ -10,7 +10,11 @@ $consulta = "SELECT *FROM producto where id='".$producto."'";
 $resultado = $mysqli->query($consulta);
 $row = mysqli_fetch_array($resultado);
 
-
+$venta = "  SELECT SUM(dt.cantidad) as TotalCompra 
+            FROM producto as p , detalle_factura as dt
+            WHERE p.id = dt.productoid and p.id = ".$producto."";
+            $resultado = $mysqli->query($venta);
+            $rowV = mysqli_fetch_array($resultado);
 $pdf = new FPDF();
 $pdf->AddPage();
 $pdf->SetMargins(20,20,20);
@@ -36,6 +40,9 @@ $pdf->Cell(40,6,$row['Estado'],0,1);
 $pdf->Ln(10);
 $pdf->Cell(35,6,'CANTIDAD: ',0,0);
 $pdf->Cell(40,6,$row['cantidad'],0,1);
+$pdf->Ln(10);
+$pdf->Cell(50,6,'CANTIDAD VENDIDA: ',0,0);
+$pdf->Cell(0,6, $rowV['TotalCompra'],0,1);
 $pdf->Ln(10);
 $pdf->Cell(11,11, $pdf->Image($row['image'],30),0);
 $pdf->Ln(10);
